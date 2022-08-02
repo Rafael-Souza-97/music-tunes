@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { getUser } from '../services/userAPI';
 import Loading from '../pages/Loading';
 
+getUser().then((a) => console.log(a));
+
 class Header extends Component {
   state = {
     userName: '',
     loadingHeader: false,
   }
 
-  async componentDidMount() {
+  componentDidMount = async () => {
     this.setState({ loadingHeader: true });
     const obj = await getUser();
     this.setState({ userName: obj.name, loadingHeader: false });
@@ -22,7 +24,7 @@ class Header extends Component {
     return (
       <header data-testid="header-component">
         <div>Header</div>
-        <p>{ userName }</p>
+        <p data-testid="header-user-name">{ userName }</p>
       </header>
     );
   }
