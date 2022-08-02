@@ -36,8 +36,6 @@ class Search extends Component {
       inputSearch,
     } = this.state;
 
-    console.log(artistArray.length);
-
     return (
       <div>
         <Header />
