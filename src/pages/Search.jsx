@@ -48,6 +48,7 @@ class Search extends Component {
                     <label htmlFor="inputArtistBand">
                       <input
                         type="text"
+                        placeholder="Pesquisar artista/banda"
                         name="inputArtistBand"
                         data-testid="search-artist-input"
                         onChange={ this.onInputSearchChange }

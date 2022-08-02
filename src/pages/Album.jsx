@@ -44,7 +44,7 @@ class Album extends Component {
             <div key={ tracks.trackId }>
               <h5>{ tracks.trackName }</h5>
               <img src={ tracks.artworkUrl60 } alt={ tracks.trackId } />
-              <MusicCard songs={ tracks.previewUrl } />
+              <MusicCard songs={ tracks.previewUrl } trackId={ tracks.trackId } />
             </div>
           ))
         }
