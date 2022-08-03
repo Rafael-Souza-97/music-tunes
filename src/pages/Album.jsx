@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
+import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 class Album extends Component {
   state = {
@@ -11,6 +12,7 @@ class Album extends Component {
     img: '',
     explicit: '',
     musics: [],
+    favorites: [],
   }
 
   componentDidMount = async () => {
@@ -25,10 +27,13 @@ class Album extends Component {
       explicit: collection.collectionExplicitness,
       musics: songs,
     });
+    const favoriteSongs = await getFavoriteSongs();
+    this.setState({ favorites: favoriteSongs });
   }
 
   render() {
-    const { artist, album, img, explicit, musics } = this.state;
+    const { artist, album, img, explicit, musics, favorites } = this.state;
+    console.log(favorites);
 
     return (
       <div>
@@ -44,7 +49,10 @@ class Album extends Component {
             <div key={ tracks.trackId }>
               <h5>{ tracks.trackName }</h5>
               <img src={ tracks.artworkUrl60 } alt={ tracks.trackId } />
-              <MusicCard songs={ tracks.previewUrl } trackId={ tracks.trackId } />
+              <MusicCard
+                songs={ tracks.previewUrl }
+                trackId={ tracks.trackId }
+              />
             </div>
           ))
         }

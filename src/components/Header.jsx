@@ -23,10 +23,10 @@ class Header extends Component {
     return (
       <header data-testid="header-component">
         <div>Header</div>
-        <p data-testid="header-user-name">{ `Olá, ${userName}` }</p>
-        <Link to="/search" data-testid="link-to-search">Search</Link>
-        <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
-        <Link to="/profile" data-testid="link-to-profile">Profile</Link>
+        <p data-testid="header-user-name">{ `Olá, ${userName}!` }</p>
+        <Link to="/search" data-testid="link-to-search">Home</Link>
+        <Link to="/favorites" data-testid="link-to-favorites">Favoritos</Link>
+        <Link to="/profile" data-testid="link-to-profile">Perfil</Link>
 
       </header>
     );
