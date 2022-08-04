@@ -1,35 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { addSong } from '../services/favoriteSongsAPI';
 import Loading from '../pages/Loading';
 
 class MusicCard extends Component {
   state = {
-    checked: false,
     isLoading: false,
   }
 
-  componentDidMount = async () => {
-    await this.onClickCheck();
-  }
-
-  onClickCheck = async () => {
-    this.setState({ isLoading: true });
-    const { trackId } = this.props;
-    await addSong(trackId);
-    this.setState({ isLoading: false });
-  }
-
-  handleChange = ({ target }) => {
-    const { name } = target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-
-    this.setState({ [name]: value });
-  }
-
   render() {
-    const { isLoading, checked } = this.state;
-    const { songs, trackId } = this.props;
+    const { isLoading } = this.state;
+    const { songs, trackId, favorites, tracks, handleChange } = this.props;
 
     return (
       <div>
@@ -54,9 +34,8 @@ class MusicCard extends Component {
                     name="checked"
                     id="check"
                     data-testid={ `checkbox-music-${trackId}` }
-                    checked={ checked }
-                    onChange={ this.handleChange }
-                    onClick={ this.onClickCheck }
+                    checked={ favorites }
+                    onChange={ (event) => handleChange(tracks, event) }
                   />
                 </label>
               </div>
@@ -69,8 +48,13 @@ class MusicCard extends Component {
 }
 
 MusicCard.propTypes = {
-  songs: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  favorites: PropTypes.bool.isRequired,
   trackId: PropTypes.number.isRequired,
+  tracks: PropTypes.shape({
+    trackId: PropTypes.number.isRequired,
+  }).isRequired,
+  songs: PropTypes.string.isRequired,
 };
 
 export default MusicCard;
