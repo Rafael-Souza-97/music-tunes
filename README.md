@@ -95,4 +95,8 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visual
 ## Infos Adicionais
 
 - ###### Percentual de cumprimento de requisitos ([Trybe](https://www.betrybe.com/))- 100%
-<!--- - ###### Percentual de cumprimento de requisitos totais da ([Trybe](https://www.betrybe.com/))- 75% --->
+<!--- - ###### Percentual de cumprimento de requisitos totais da ([Trybe](https://www.betrybe.com/))- 79% --->
+
+## Preview
+
+https://user-images.githubusercontent.com/99055008/206927686-451eb26d-509d-4337-9a7d-c7120bb3b0d2.mp4
