@@ -1,0 +1,105 @@
+body {
+  background-color: rgb(247, 247, 247);
+}
+
+.body-search {
+  font-family: Arial, sans-serif;
+  background-color: rgb(247, 247, 247);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-search {
+  width: 650px;
+  display: flex;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.input-search {
+  display: block;
+  width: 400px;
+  padding: 15px;
+  margin-right: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.button-search {
+  background-color: #4CAF50;
+  padding: 15px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 100px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.album-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.albuns {
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin: 20px;
+  padding: 30px 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.artist {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  font-family: monospace;
+  text-decoration: none;
+}
+
+.album-name {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  font-family: monospace;
+  text-decoration: none;
+}
+
+.album-img {
+  width: 150px;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.see-more {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  font-family: monospace;
+  text-decoration: none;
+}

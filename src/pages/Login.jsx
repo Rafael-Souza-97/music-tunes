@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import '../styles/Login.css'
+import Logo from '../components/Logo';
 
 class Login extends Component {
   state = {
@@ -33,16 +35,17 @@ class Login extends Component {
     if (loading) return <Loading />;
 
     return (
-      <div data-testid="page-login">
-        <form>
+      <div data-testid="page-login" className="body">
+          <form className="form">
+          <Logo />
           <label htmlFor="loginValue">
-            Nome:
             <input
               type="text"
               name="loginValue"
               data-testid="login-name-input"
               id="loginName"
               placeholder="Digite o seu nome"
+              className="input"
               onChange={ this.onInputChange }
             />
           </label>
@@ -51,6 +54,7 @@ class Login extends Component {
             type="button"
             data-testid="login-submit-button"
             disabled={ isLoginButtonDisabled }
+            className="button"
             onClick={ this.handleSubmit }
           >
             Enviar

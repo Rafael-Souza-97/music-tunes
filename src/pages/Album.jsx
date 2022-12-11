@@ -5,6 +5,7 @@ import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
+import '../styles/MusicCard.css';
 
 class Album extends Component {
   state = {
@@ -58,8 +59,8 @@ class Album extends Component {
         <Header />
         {
           isLoading ? <Loading /> : (
-            <div>
-              <div data-testid="page-album">
+            <div className="music-card-container">
+              <div data-testid="page-album" className="page-album">
                 <h1 data-testid="artist-name">{ artist }</h1>
                 <img src={ img } alt={ album } />
                 <h6>{ explicit }</h6>
@@ -67,7 +68,7 @@ class Album extends Component {
               </div>
               {
                 musics.map((tracks) => (
-                  <div key={ tracks.trackId }>
+                  <div key={ tracks.trackId } className="music">
                     <h5>{ tracks.trackName }</h5>
                     <img src={ tracks.artworkUrl60 } alt={ tracks.trackId } />
                     <MusicCard

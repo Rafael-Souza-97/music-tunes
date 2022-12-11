@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  font-family: monospace
+}
+
+.logo {
+  width: 100px;
+}

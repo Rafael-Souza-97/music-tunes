@@ -1,0 +1,38 @@
+.body-music {
+  display: flex;
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorites {
+  margin: 15px;
+  text-align: center;
+}
+
+.music-card-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.page-album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+  width: 125px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin: 20px;
+  padding: 30px 100px;
+  text-align: center;
+  text-decoration: none;
+}

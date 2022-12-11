@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import '../styles/Loading.css'
 
 class Loading extends Component {
   render() {
     return (
-      <p>Carregando...</p>
+      <p className="loading">........</p>
     );
   }
 }

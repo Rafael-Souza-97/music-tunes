@@ -1,0 +1,73 @@
+.header {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 75px;
+  padding: 0px 55px;
+  background-color: rgb(247, 247, 247);
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.user {
+  font-family: monospace;
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: 230px;
+}
+
+.link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(204, 204, 204);
+  color: black;
+}
+
+.home {
+  font-family: monospace;
+  font-size: 36px;
+  text-decoration: none;
+  width: 100%;
+  color: black;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home:active {
+  background-color: bisque;
+}
+
+.favoritos {
+  font-family: monospace;
+  font-size: 36px;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.favoritos:active {
+  background-color: bisque;
+}
+
+.perfil {
+  font-family: monospace;
+  font-size: 36px;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.perfil:active, .perfil:visited {
+  background-color: bisque;
+}

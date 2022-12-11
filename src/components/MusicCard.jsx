@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Loading from '../pages/Loading';
+import '../styles/MusicCard.css';
 
 class MusicCard extends Component {
   state = {
@@ -12,7 +13,7 @@ class MusicCard extends Component {
     const { songs, trackId, favorites, tracks, handleChange } = this.props;
 
     return (
-      <div>
+      <div className="body-music">
         {
           isLoading ? <Loading /> : (
             <section>
