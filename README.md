@@ -1,7 +1,7 @@
 # Music Tunes
 
 Aplicação realizada enquanto aluno da [Trybe](https://www.betrybe.com/) para reforçar os conhecimentos sobre [React](https://pt-br.reactjs.org/) com classes.
-O aplicativo é capax de reproduzir previews de músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.
+O aplicativo é capaz de reproduzir previews de músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.
 Foi utilizado uma API do [iTunes](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html) para renderizar os artitas/bandas, albuns e músicas.
 
 Neste projeto foi desenvolvido um aplicativo de músicas onde o usuário é capaz de:
